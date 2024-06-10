@@ -11,7 +11,7 @@ function App() {
     <>
       <Headers />
       <div className="serach-filter flex flex-wrap px-[5vw] justify-between">
-        <SearchBar setQueary={setQueary} /> <Filter />
+        <SearchBar setQueary={setQueary} /> <Filter setQueary={setQueary} />
       </div>
       <div className="body w-full h-auto flex ">
         <Cards query={query} />

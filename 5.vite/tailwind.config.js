@@ -6,5 +6,6 @@ module.exports = {
     "./pages/**/*.{html,js,jsx,ts,tsx}", // Adjust paths as necessary
     // Add any other directories that contain your source files
   ],
+  darkMode: "class",
   // Other configurations...
 };

@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Data from "../database/Data";
 
-const Cards = () => {
-  console.log(Data); // Consider removing this line in production for performance reasons
+const Cards = ({ query }) => {
+  console.log(query);
+  console.log(Data);
+  const [value, setQueary] = useState();
+
+  const FilterProducts = Data.filter((product) =>
+    product.category.toLocaleLowerCase().includes(query)
+  );
+  console.log(FilterProducts);
+
   return (
     <div className="flex w-full min-h-screen">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center gap-6 mt-12">
-          {Data.map((product, index) => (
+          {FilterProducts.map((product, index) => (
             <div
               key={index}
               className="bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-200 ease-out hover:-translate-y-1 hover:scale-105 flex flex-col"

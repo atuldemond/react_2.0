@@ -26,7 +26,7 @@ const Cards = ({ query }) => {
                 <h2 className="text-xl h-[22vh] w-[15vw] font-bold mb-2 text-black dark:text-gray-300">
                   {product.title}
                 </h2>
-                <p className="text-gray-600 text-3xl font-bold dark:text-gray-400">
+                <p className="text-gray-600 text-3xl font-bold dark:text-white">
                   ${product.price}
                 </p>
                 <button className="mt-4 px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-700 transition duration-150 ease-in-out dark:bg-blue-700 dark:hover:bg-blue-900">
